@@ -1,0 +1,29 @@
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #2A5799;
+}
+h1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 35pt;
+}
+h3{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.imagem1{
+    width:40%;
+    align-self: center;
+}
+
+.imagem2{
+    width: 40%;
+    align-self: center;
+}
