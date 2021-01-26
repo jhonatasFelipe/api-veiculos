@@ -1,5 +1,7 @@
 <?php
-
+use App\Slide;
+use App\EmailContato;
+use App\EmailInteresse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -44,3 +46,7 @@ Route::resource('combustivel','CombustivelController');
 
 Route::resource('acessorio','AcessorioController');
 Route::post('mail','emailController@enviaInterese');
+
+Route::resource('slide',SlideController::class);
+Route::resource('email_contato', EmailContatoController::class);
+Route::resource('email_interesse',EmailInteresseController::Class);

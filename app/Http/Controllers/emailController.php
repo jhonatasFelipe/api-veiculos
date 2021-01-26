@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Mail\Interresse;
 use Illuminate\Support\Facades\Mail;
+use App\EmailInteresse;
 
 class emailController extends Controller
 {
@@ -14,7 +15,11 @@ class emailController extends Controller
         $telefone = $request->telefone;
         $veiculo = $request->veiculo;
 
-        $mail =  new Interresse($veiculo, $cliente, $email ,$telefone);
-        Mail::to('jhonatas1020@gmail.com')->send($mail);
+         
+        $destinatarios = EmailInteresse::select('email');
+        
+        foreach($destinatarios->get() as $destinatario){
+            Mail::to($destinatario->mail)->send(new Interresse($veiculo, $cliente, $email ,$telefone));
+        }
     }
 }
